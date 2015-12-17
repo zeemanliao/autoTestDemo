@@ -6,6 +6,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-istanbul');
     grunt.loadNpmTasks('grunt-env');
     
+    //指定測試程式
     var src = ['test/*.test.js'];
     
     grunt.initConfig({
@@ -26,7 +27,7 @@ module.exports = function(grunt) {
             test: {
                 options: {
                     reporter: 'spec',
-                    timeout: 3000
+                    timeout: 3000   //當測試同步方法時,設定的執行完成時間上限
                 },
                 src: src
             }
@@ -40,21 +41,21 @@ module.exports = function(grunt) {
             src: 'coverage/**/*.json',
             options: {
                 type: 'lcov',
-                dir: 'coverage',
+                dir: 'coverage',    //報告產出位置
                 print: 'detail'
             }
         },
-        clean: {
+        clean: {        //每次執行前要清除的檔案或目錄
             coverage: {
                 src: ['test/instrument/','coverage/']
             }
         },
-        jshint: {
+        jshint: {       //jshint測試
             all: ['lib/*'],
             options: {
-                node: true,
-                moz: true,
-                "-W040":true
+                node: true,     //開啟node.js測試
+                moz: true,      //開啟ES6
+                "-W040":true    //忽略可能造成undefined偵測
             }
         }
     });

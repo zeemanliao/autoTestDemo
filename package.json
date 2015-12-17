@@ -16,8 +16,7 @@
     "test",
     "BDD",
     "mocha",
-    "should",
-    "banklet"
+    "should"
   ],
   "author": "zeemanliao",
   "license": "MIT",
