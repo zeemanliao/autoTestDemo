@@ -1,0 +1,38 @@
+{
+  "name": "autoTestDemo",
+  "version": "1.0.0",
+  "description": "Node.js auto run BDD Test with mocha/should/blanket/grunt",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeemanliao/autoTestDemo.git"
+  },
+  "keywords": [
+    "node.js",
+    "auto",
+    "test",
+    "BDD",
+    "mocha",
+    "should",
+    "banklet"
+  ],
+  "author": "zeemanliao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zeemanliao/autoTestDemo/issues"
+  },
+  "homepage": "https://github.com/zeemanliao/autoTestDemo#readme",
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.7.0",
+    "grunt-contrib-jshint": "^0.11.3",
+    "grunt-env": "^0.4.4",
+    "grunt-istanbul": "^0.6.1",
+    "grunt-mocha-test": "^0.12.7",
+    "mocha": "^2.3.4",
+    "should": "^8.0.1"
+  }
+}
